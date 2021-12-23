@@ -3,8 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>Google Glass</title>
+        <!--Arquivo CSS externo -->
         <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
     </head>
+    <!--Arquivo JS externo -->
+    <script language="javascript" src="_javascript/funcoes.js"></script>
     <body>
         <div id="interface">
             <header id="cabecalho">
@@ -17,14 +20,28 @@
                 <!--
                     O formato PNG é ligeiramente maior, mas possibilitam transparências. O formato JPEG é mais otimizado, pois suporta compressão sem uma perda perceptível na qualidade visual.
                 -->
-                <nav id="menu">
+                <nav id="menu" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')">
                     <h1>Menu Principal</h1>
                     <ul type="disc">
-                        <a href="index.html"><li>Home</li></a>
-                        <a href="specs.html"><li>Especificações</li></a>
-                        <a href="fotos.html"><li>Fotos</li></a>
-                        <a href="multimidia.html"><li>Multimídia</li></a>
-                        <a href="fale-conosco.html"><li>Fale conosco</li></a>
+                        <a href="index.html" 
+                        onmousemove="mudaFoto('_imagens/home.png')">
+                        <li>Home</li></a>
+                        
+                        <a href="specs.html" 
+                        onmousemove="mudaFoto('_imagens/especificacoes.png')">
+                        <li>Especificações</li></a>
+                        
+                        <a href="fotos.html" 
+                        onmousemove="mudaFoto('_imagens/fotos.png')">
+                        <li>Fotos</li></a>
+                        
+                        <a href="multimidia.html" 
+                        onmousemove="mudaFoto('_imagens/multimidia.png')">
+                        <li>Multimídia</li></a>
+                        
+                        <a href="fale-conosco.html"
+                        onmousemove="mudaFoto('_imagens/contato.png')">
+                        <li>Fale conosco</li></a>
                     </ul>
                 </nav>
                 <!--
@@ -46,112 +63,145 @@
                 &nbsp Espaço - No Break Space
             -->
             <section id="corpo">
-                <hgroup>
-                    <h3>Tecnologia > Inovações</h3>
-                    <h1>Saiba tudo sobre o Google Glass</h1>
-                    <h2>por Pablo Henrique - Curso em Vídeo (HTML)</h2>
-                    <h3>Atualizado em 20/Dezembro/2021</h3>
-                </hgroup>
+                <article id="noticia-main">
+                    <header id="cabecalho-artigo">
+                        <hgroup>
+                            <h3>Tecnologia > Inovações</h3>
+                            <h1>Saiba tudo sobre o Google Glass</h1>
+                            <h2>por Pablo Henrique - Curso em Vídeo (HTML)</h2>
+                            <h3 class="dir">Atualizado em 20/Dezembro/2021</h3>
+                        </hgroup>
+                    </header>
 
-                <!--
-                    Exemplo de códigos para formatação
-                    <pre> -- Pré-formatação (inclui enter, espaços etc)
-                        <code> Informa ao navegador que é um código
-                        #include &lt;iostream&gt;
-                        int main(){
-                            cout << "Olá, Mundo!";
-                            return 0;
-                        }
-                        </code>
-                    </pre>
-                -->
+                    <!--
+                        Exemplo de códigos para formatação
+                        <pre> -- Pré-formatação (inclui enter, espaços etc)
+                            <code> Informa ao navegador que é um código
+                            #include &lt;iostream&gt;
+                            int main(){
+                                cout << "Olá, Mundo!";
+                                return 0;
+                            }
+                            </code>
+                        </pre>
+                    -->
 
-                <!--
-                    &shy Quebra de palavra usando de hífen
-                    Simbolos especiais
+                    <!--
+                        &shy Quebra de palavra usando de hífen
+                        Simbolos especiais
+                        
+                        ------- Sinais -------
+                        &lt; [maior que] >
+                        &gt; [menor que] <
+                        &le; [maior igual a] >=
+                        &ge; [menor igual a] <=
+                        %permil; [Dividido por mil]
+                        &sum; [Soma]
+                        &infin; [Infinito]
+                        &times; [Multiplicação]
+                        outros...
+                        
+                        ------- Dinheiro -------
+                        &pound; [Libra]
+                        &yen; [Iene]
+                        &euro; [Euro]
+                        outros...
+
+                        ------- Registros -------
+                        &copy; [Copyright]
+                        &reg; [Marca Registrada]
+                        &trade; [Trade Mark]
+                        outros...
+                    -->
                     
-                    ------- Sinais -------
-                    &lt; [maior que] >
-                    &gt; [menor que] <
-                    &le; [maior igual a] >=
-                    &ge; [menor igual a] <=
-                    %permil; [Dividido por mil]
-                    &sum; [Soma]
-                    &infin; [Infinito]
-                    &times; [Multiplicação]
-                    outros...
-                    
-                    ------- Dinheiro -------
-                    &pound; [Libra]
-                    &yen; [Iene]
-                    &euro; [Euro]
-                    outros...
+                    <h2>O que é</h2>
+                    <p>O <span style="text-decoration: underline; font-weight: bolder;">Google Glass</span> é um acessório em forma de óculos que possibilita a interação dos usuários com diversos conteúdos em realidade aumentada. Também chamado de <a href="https://www.google.com/glass/start/" target="_blank">Project Glass</a>, o eletrônico é capaz de tirar fotos a partir de comandos de voz, enviar mensagens instantâneas e realizar vídeo&shy;con&shy;ferências. Seu lançamento está previsto para 2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o <em>Google Glass</em> encontra-se em fase de testes e já possui um vídeo totalmente gravado com o dispositivo. Além disso, a companhia de buscas registrou novas patentes anti-furto e de desbloqueio de tela para o acessório.</p>
 
-                    ------- Registros -------
-                    &copy; [Copyright]
-                    &reg; [Marca Registrada]
-                    &trade; [Trade Mark]
-                    outros...
-                -->
-                
-                <h2>O que é</h2>
-                <p>O <span style="text-decoration: underline; font-weight: bolder;">Google Glass</span> é um acessório em forma de óculos que possibilita a interação dos usuários com diversos conteúdos em realidade aumentada. Também chamado de <a href="https://www.google.com/glass/start/" target="_blank">Project Glass</a>, o eletrônico é capaz de tirar fotos a partir de comandos de voz, enviar mensagens instantâneas e realizar vídeo&shy;con&shy;ferências. Seu lançamento está previsto para 2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o <em>Google Glass</em> encontra-se em fase de testes e já possui um vídeo totalmente gravado com o dispositivo. Além disso, a companhia de buscas registrou novas patentes anti-furto e de desbloqueio de tela para o acessório.</p>
+                    <!--
+                        <b> Negrito
+                        <i> Itálico
+                        <em> Enfasê
+                        <del> Indicar texto deletado / riscado
+                        <sup> Eleva item (Exemplo: X<sup>2</sup>)
+                        <sub> Item inferior (Exemplo: H<sub>2</sub>)O
+                        <span> Editar pequenos trechos de texto
+                    -->
 
-                <!--
-                    <b> Negrito
-                    <i> Itálico
-                    <em> Enfasê
-                    <del> Indicar texto deletado / riscado
-                    <sup> Eleva item (Exemplo: X<sup>2</sup>)
-                    <sub> Item inferior (Exemplo: H<sub>2</sub>)O
-                    <span> Editar pequenos trechos de texto
-                -->
+                    <figure class="foto-legenda">
+                        <img src="_imagens/glass-quadro-homem-mulher.jpg"/>
+                        <figcaption>
+                            <h3>Google Glass</h3>
+                            <p>Uma nova maneira de ver o mundo!</p>
+                        </figcaption>
+                    </figure>
 
-                <figure class="foto-legenda">
-                    <img src="_imagens/glass-quadro-homem-mulher.jpg"/>
-                    <figcaption>
-                        <h3>Google Glass</h3>
-                        <p>Uma nova maneira de ver o mundo!</p>
-                    </figcaption>
-                </figure>
+                    <!--
+                        <img src="fundo.jpg" width="200"/>
+                        <img src="fundo-menor.jpg"/>
+                        Sempre tomar cuidado com o formato das imagens e nunca reduzir com 'width'
+                        1. A imagem carregada será a mesma
+                        2. Mesmo tamanho e peso de arquivo
+                        3. Salvar como formato para web
+                        
+                        Sempre utilizar ferramentas como psd, gimp para reduzir a imagem
+                    -->
 
-                <!--
-                    <img src="fundo.jpg" width="200"/>
-                    <img src="fundo-menor.jpg"/>
-                    Sempre tomar cuidado com o formato das imagens e nunca reduzir com 'width'
-                    1. A imagem carregada será a mesma
-                    2. Mesmo tamanho e peso de arquivo
-                    3. Salvar como formato para web
-                    
-                    Sempre utilizar ferramentas como psd, gimp para reduzir a imagem
-                -->
+                    <h2>Data de lançamento</h2>
+                    <p>Não há uma data específica e oficial para o dispositivo ser lançado, ainda. Pode ser que ele esteja disponível em demonstrações a partir de 2013, mas seu lançamento para as lojas fica para, pelo menos, 2014.</p>
 
-                <h1>Data de lançamento</h1>
-                <p>Não há uma data específica e oficial para o dispositivo ser lançado, ainda. Pode ser que ele esteja disponível em demonstrações a partir de 2013, mas seu lançamento para as lojas fica para, pelo menos, 2014.</p>
+                    <h2>Especificações Técnicas</h2>
+                    <table id="tabela1">
+                        <caption>Tabela Técnica do Google Glass <span>Mar/2013</span></caption>
+                            
+                        <!-- 
+                                Criação da tabela e título
+                                <tr> table rows (linhas da tabela)
+                                <td> table data (dados da tabela) 
+                            -->
+                            
+                            <tr>
+                                <td class="col-esq">Tela</td>
+                                <td class="col-dir">Resolução equivalente a tela de 25"</td>
+                            </tr>
+                            <tr>
+                                <td class="col-esq" rowspan="2">Camera</td>
+                                <!--
+                                    Para a célula ocupar 2 linhas = rowspan
+                                    Para a célula ocupar 2 colunas = colspan
+                                -->
+                                <td class="col-dir">5MP para fotos</td>
+                            </tr>
+                            <tr>
+                                <td class="col-dir">720p para vídeos</td>
+                            </tr>
+                            <tr>
+                                <td class="col-esq" rowspan="2">Conectividade</td>
+                                <td class="col-dir">Wi-Fi</td>
+                            </tr>
+                            <tr>
+                                <td class="col-dir">Bluetooth</td>
+                            </tr>
+                            <tr>
+                                <td class="col-esq">Memória Interna</td>
+                                <td class="col-dir">12GB</td>
+                            </tr>
+                    </table>
+                    <h2>Como funciona</h2>
+                    <p>De acordo com fontes próximas do Google, os óculos vão contar com uma pequena tela de LCD ou AMOLED na parte superior e em frente aos olhos do usuário. Com o uso de uma câmera e GPS, você pode se situar, assim como selecionar opções com o movimento da cabeça.</p>
 
-                <h1>Especificações Técnicas</h1>
-                
-                Tabela Técnica do Google Glass Mar/2013
-                Tela:Resolução equivalente a tela de 25"
-                Camera: 5MP para fotos / 720p para vídeos
-                Conectividade: Wi-Fi/ Bluetooth
-                Memória Interna: 12GB
+                    <h2>O que você pode fazer com o Google Glasses</h2>
+                    <p>O vídeo de divulgação do Google mostra que você pode se transformar em uma espécie de “super-humano”, já que o aparelho pode indicar a quantos metros você está de seu destino, se o metrô está aberto ou fechado, mostrar o clima, agenda e até mesmo permitir que você marque encontros apenas com comandos de voz.</p>
 
-                <h1>Como funciona</h1>
-                <p>De acordo com fontes próximas do Google, os óculos vão contar com uma pequena tela de LCD ou AMOLED na parte superior e em frente aos olhos do usuário. Com o uso de uma câmera e GPS, você pode se situar, assim como selecionar opções com o movimento da cabeça.</p>
-
-                <h1>O que você pode fazer com o Google Glasses</h1>
-                <p>O vídeo de divulgação do Google mostra que você pode se transformar em uma espécie de “super-humano”, já que o aparelho pode indicar a quantos metros você está de seu destino, se o metrô está aberto ou fechado, mostrar o clima, agenda e até mesmo permitir que você marque encontros apenas com comandos de voz.</p>
-
-                [AQUI ENTRA UM VÍDEO]
+                    [AQUI ENTRA UM VÍDEO]
+                </article>
             </section>
             <aside id="lateral">
                 <h1>Outras Notícias</h1>
-                <h1>Vídeo mais recente</h1>
+                <h2>Vídeo mais recente</h2>
 
                 [AQUI ENTRA UM VÍDEO]
 
-                <h1>Novidades no Glass</h1>
+                <h2>Novidades no Glass</h2>
                 <p>O Google enfim revelou as especificações completas do Google Glass, e com ele uma surpresa ainda inédita no mercado: a gigante das buscas usará um sistema de áudio baseado na transdução por condução. Através das hastes dos óculos, o som será transmitido para o ouvido do usuário por meio de microvibrações em determinados ossos de sua cabeça, sem usar nenhum tipo de alto-falante.</p>
 
                 <p>Além da surpresa do áudio, a tela montada a frente do olho do usuário também chamou atenção. Serão 640 x 360 pixels de resolução que, em proporção, equivaleria a um monitor de 25 polegadas de alta definição colocado a 2,5 metros de distância do espectador.</p>

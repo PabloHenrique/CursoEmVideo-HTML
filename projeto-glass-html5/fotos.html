@@ -1,14 +1,44 @@
-Google Glass
-A revolução do Google está chegando
-
-[AQUI ENTRA UMA FOTO]
-
-Menu Principal
-- Home
-- Especificações
-- Fotos
-- Multimídia
-- Fale conosco
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Google Glass</title>
+        <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    </head>
+    <script language="javascript" src="_javascript/funcoes.js"></script>
+    <body>
+        <div id="interface">
+            <header id="cabecalho">
+                <hgroup>
+                    <h1>Google Glass</h1>
+                    <h2>A revolução do Google está chegando</h2> 
+                </hgroup>
+                <img id="icone" src="_imagens/fotos.png" alt="">
+                <nav id="menu" onmouseout="mudaFoto('_imagens/fotos.png')">
+                    <h1>Menu Principal</h1>
+                    <ul type="disc">
+                        <a href="index.html" 
+                        onmousemove="mudaFoto('_imagens/home.png')">
+                        <li>Home</li></a>
+                        
+                        <a href="specs.html" 
+                        onmousemove="mudaFoto('_imagens/especificacoes.png')">
+                        <li>Especificações</li></a>
+                        
+                        <a href="fotos.html" 
+                        onmousemove="mudaFoto('_imagens/fotos.png')">
+                        <li>Fotos</li></a>
+                        
+                        <a href="multimidia.html" 
+                        onmousemove="mudaFoto('_imagens/multimidia.png')">
+                        <li>Multimídia</li></a>
+                        
+                        <a href="fale-conosco.html"
+                        onmousemove="mudaFoto('_imagens/contato.png')">
+                        <li>Fale conosco</li></a>
+                    </ul>
+                </nav>
+            </header>
 
 Glass > Fotos
 Galeria de Imagens do Google Glass
@@ -24,6 +54,13 @@ Veja na nossa galeria de fotos várias belas imagens que mostram algumas das pri
 - Vários tipos de lente
 - Informações importantes
 
-Copyright 2013 - by Gustavo Guanabara
-
-Facebook | Twitter
+            <footer id="rodape">
+                <p>
+                Copyright 2021 - by Pablo Henrique - Curso em Vídeo (HTML)<br>
+                <a href="https://www.facebook.com/pablohenrique.nadai/" target="blank">Facebook</a> |
+                <a href="#" target="blank">Twitter</a>
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>

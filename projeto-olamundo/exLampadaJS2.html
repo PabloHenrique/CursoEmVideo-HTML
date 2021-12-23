@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Teste JavaScript</title>
+        <script>
+            function acenderLampada(){
+                document.getElementById("luz").src = "../projeto-glass-html5/_imagens/lampada-acesa.jpg";
+            }
+            function apagarLampada(){
+                document.getElementById("luz").src = "../projeto-glass-html5/_imagens/lampada-apagada.jpg";
+            }
+            function quebrarLampada(){
+                document.getElementById("luz").src = "../projeto-glass-html5/_imagens/lampada-quebrada.jpg";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Acenda a lâmpada</h1>
+        <img src="../projeto-glass-html5/_imagens/lampada-apagada.jpg" id="luz" onmousemove="acenderLampada()" onmouseout="apagarLampada()" onclick="quebrarLampada()">
+        <!--
+            Onmousemove = Ao passar o mouse
+            Onmouseout = Ao retirar o mouse do obj
+            Onclick = Ao clicar
+        -->
+    </body>
+</html>
