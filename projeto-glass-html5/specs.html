@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Google Glass</title>
         <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+        <link rel="stylesheet" type="text/css" href="_css/specs.css"/>
     </head>
     <script language="javascript" src="_javascript/funcoes.js"></script>
     <body>
@@ -40,15 +41,43 @@
                 </nav>
             </header>
 
-Glass > Especificações
-Raio-X no Google Glass
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+            <section id="corpo-full">
+                <article id="noticia-main">
+                    <header id="cabecalho-artigo">
+                        <hgroup>
+                            <h3>Glass > Especificações</h3>
+                            <h1>Raio-X no Google Glass</h1>
+                            <h2>por Pablo Henrique - Curso em Vídeo (HTML)</h2>
+                            <h3 class="dir">Atualizado em 20/Dezembro/2021</h3>
+                        </hgroup>
+                    </header>
+                <p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
+                <section id="conteudo">
+                    <img src="_imagens/glass-esquema-marcado.jpg"  usemap="#meumapa">
+                    <map name="meumapa"><!-- Criação do mapa da imagem -->
+                        <area shape="rect" coords="180,200, 270,255" href="google-glass.html#tela" target="janela"/><!--Abrir o article#tela com o target no iframe-->
+                        <area shape="circle" coords="160,245, 12" href="google-glass.html#camera" target="janela"/>
+                        <!--
+                            Sempre no campo das coordenadas, respeitar: 
+                            
+                            - Sempre em pixels.
+                            
+                            - Se for retângulo / rect = Informar canto superior direito e canto inferior esquerdo.
 
-Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.
+                            - Se for um circulo / circle = Informar o centro e o valor do raio.
 
-[AQUI ENTRA UMA IMAGEM]
-
+                            - Se for um poligono / poly = Informar todos os pontos do objeto. (Sentido horário)
+                        -->
+                        <area shape="circle" coords="75,55, 12" href="google-glass.html#gadgets" target="janela"/>
+                        <area shape="poly" coords="28,143, 83,216, 84,249, 27,169" href="google-glass.html#sensores" target="janela"/>
+                    </map>
+                    <iframe src="google-glass.html" name="janela" id="frames" scrolling="no"></iframe>
+                    <!--
+                        Criação de um Iframe, isto é, incluisão um elemento HTML dentro de outro objeto HTML principal
+                    -->
+                </section>
+                </article>
+            </section>
             <footer id="rodape">
                 <p>
                 Copyright 2021 - by Pablo Henrique - Curso em Vídeo (HTML)<br>
