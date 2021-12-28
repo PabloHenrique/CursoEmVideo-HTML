@@ -39,40 +39,95 @@
                     </ul>
                 </nav>
             </header>
+            <section id="corpo-full">
+                <article id="noticia-main">
+                    <header id="cabecalho-artigo">
+                        <hgroup>
+                            <h3>Fale Conosco > Contato</h3>
+                            <h1>Formulário de Contato</h1>
+                            <h2>por Pablo Henrique - Curso em Vídeo (HTML)</h2>
+                            <h3 class="dir">Atualizado em 20/Dezembro/2021</h3>
+                        </hgroup>
+                    </header>
+                    <form method="post" id="formulario" action="mailto:pablohenriquenadai@gmail.com">
+                    <!--
+                        GET - Dados enviados através da URL (Rápido / Riscos)
+                        POST - Dados enviados através de pacotes da internet (Lento / Seguro)
+                        + criptografia
+                        
+                        No action, "mailto:pablohenriquenadai@gmail.com" Envia os dados para o email escolhido.
+                        Para evitar problemas, é recomendado utilizar uma linguagem adequada juntamente com um serviço de banco de dados
+                        Exemplo: PHP + MySQL
+                    -->
+                        <fieldset id="usuario"><!-- Separação dos campos -->
+                            <legend>Identificação do Usuário</legend>
+                            <!--
+                                Size: Determina quantos chars aparecerão na tela
+                                Max-Length: Determina o número total de chars
+                                Placeholder: Legenda do input
+                            -->
+                            <p><label for="campoNome">Nome:</label><input type="text" name="tNome" id="campoNome" size="20" maxlength="30" placeholder="Nome Completo"/></p>
+                            <p><label for="campoSenha">Senha:</label><input type="password" name="tSenha" id="campoSenha" size="8" maxlength="8" placeholder="Ex: 12345678"/></p>
+                            <p><label for="campoEmail">E-mail:</label><input type="email" name="tEmail" id="campoEmail" size="20" maxlength="40" placeholder="seuemail@email.com"/></p>
+                            <fieldset id="sexo"><legend>Sexo</legend>
+                                    <!--
+                                        Mesmo valor no "name"
+                                        Label for = Referenciar semânticamente e melhorar a usuabilidade
 
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
-
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
-
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
-
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
-
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
-
-
-[BOTÃO ENVIAR]
-
+                                        Para deixar um campo previamente marcado, utilizar: checked
+                                    -->
+                                    <input type="radio" name="tSexo" id="campoMasc"> <label for="campoMasc">Masculino</label><br>
+                                    <input type="radio" name="tSexo" id="campoFem"> <label for="campoFem">Feminino</label>
+                            </fieldset>
+                            <p><label for="campoData">Data de Nascimento: </label><input type="date" name="tData" id="campoData"></p>
+                        </fieldset>
+                        
+                        <fieldset id="end">
+                            <legend>Endereço do Usuário</legend>
+                                <p><label for="campoLog">Logradouro:</label> <input type="text" name="tLog" id="campoLog" size="13" maxlength="80" placeholder="Ex: Rua, Av ..."></p>
+                                <p><label for="campoNumero">Número:</label> <input type="number" name="tNumero" id="campoNumero" min="0" max="9999" placeholder="Ex: 235"></p><!-- Número mínimo e máximo-->
+                                <p><label for="campoEstado">Estado:</label>
+                                <select name="selEstado" id="campoEstado">
+                                    <optgroup label="Região Sudeste">
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="MG">Minas Gerais</option>
+                                    </optgroup>
+                                    <optgroup label="Região Sul">
+                                        <option value="PR">Paraná</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="RS">Rio Grande Do Sul</option>
+                                    </optgroup>
+                                </select></p>
+                                <p><label for="campoCidade">Cidade:</label>
+                                <input type="text" name="tCidade" id="campoCidade" maxlength="40" size="20" placeholder="Ex: suaCidade" list="cidades"></p>
+                                <datalist id="cidades">
+                                    <option value="Rio de Janeiro"></option>
+                                    <option value="Nova Iguaçu"></option>
+                                    <option value="Niteroí"></option>
+                                    <option value="Outra Cidade"></option>
+                                </datalist>
+                            </fieldset>
+                        
+                        <fieldset id="msg">
+                            <legend>Mensagem do Usuário</legend>
+                                <p><label for="">Grau de Urgência:</label>
+                                <sub>Mín</sub><input type="range" name="tUrg" id="campoUrg" min="0" max="10" step="1"><sup>Máx</sup></p><br>
+                                <p><label for="">Mensagem:</label><br>
+                                <textarea name="tMsg" id="campoMsg" cols="45" rows="5" placeholder="Digite aqui a sua mensagem!"></textarea></p>
+                        </fieldset>
+                        
+                        <fieldset id="pedido">
+                            <legend>Quero um Google Glass</legend>
+                                <p><label for="">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                                <p><label for="">Cor:</label></p>
+                                <p><label for="">Quantidade:</label></p>
+                                <p><label for="">Preço Total: R$</label></p>
+                        </fieldset>
+                        [BOTÃO ENVIAR]
+                    </form>
+                </article>
+            </section>
             <footer id="rodape">
                 <p>
                 Copyright 2021 - by Pablo Henrique - Curso em Vídeo (HTML)<br>

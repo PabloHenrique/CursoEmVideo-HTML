@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Google Glass</title>
         <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+        <link rel="stylesheet" type="text/css" href="_css/media.css"/>
     </head>
     <script language="javascript" src="_javascript/funcoes.js"></script>
     <body>
@@ -39,18 +40,54 @@
                     </ul>
                 </nav>
             </header>
+            <section id="corpo-full">
+                <article id="noticia-main">
+                    <header id="cabecalho-artigo">
+                        <hgroup>
+                            <h3>Glass > Multimídia</h3>
+                            <h1>Sons e Vídeos</h1>
+                            <h2>por Pablo Henrique - Curso em Vídeo (HTML)</h2>
+                            <h3 class="dir">Atualizado em 20/Dezembro/2021</h3>
+                        </hgroup>
+                    </header>
+                    <div id="tv-radio">
+                        <!--
+                            Parametros importantes:
+                            
+                            - Na tag áudio, é recomendado utilizar [controls="controls"]
+                            
+                            - Para selecionar o som, utiliza-se da tag source com o parâmetro type
 
-Glass > Multimídia
-Sons e Vídeos
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+                            - Para abrir a página com o áudio, colocar na tag <audio autoplay>
+                            
+                            - Para determinar o volume:
+                                <script>
+                                    var musica = document.getElementById("variavelAudio");
+                                    musica.volume = 0.1; -- Volume do áudio --
+                                </script>
+                        -->
+                        <audio id="musica"  controls="controls">
+                            <source src="_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg"/>
+                            Descupe, mas não foi possível carregar o áudio.
+                            Atualize o seu navegador para a versão mais recente, para garantir assim, uma melhor experiência!
+                        </audio>
+                        <video id="filme" controls="controls" poster="_imagens/video-mini03.jpg">
+                            <source src="_media/getting-started.mp4" type="video/mp4"/>
+                            Descupe, mas não foi possível carregar o vídeo.
+                            Atualize o seu navegador para a versão mais recente, para garantir assim, uma melhor experiência!
+                            <!--
+                            Converter para diferentes navegadores web
+                            <source src="_media/getting-started.webm" type="video/webm"/>
+                            <source src="_media/getting-started.ogv" type="video/ogg"/>
 
-
-Áudio e Vídeo
-
-[AQUI ENTRA UM VÍDEO]
-[AQUI ENTRA UM ÁUDIO]
-
+                            Video do Youtube
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/4EvNxWhskf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            -->
+                            
+                        </video>
+                    </div>
+                </article>
+            </section>
             <footer id="rodape">
                 <p>
                 Copyright 2021 - by Pablo Henrique - Curso em Vídeo (HTML)<br>

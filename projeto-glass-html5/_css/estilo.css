@@ -253,3 +253,20 @@ footer#rodape{
 footer#rodape p{
     text-align: center;
 }
+
+/* Videos */
+
+video#filme01{
+    width: 500px;
+}
+
+video#filme02{
+    width: 450px;
+}
+
+/* About */
+
+textarea{
+    margin-left: 5%;
+    margin-top: 1%;
+}
