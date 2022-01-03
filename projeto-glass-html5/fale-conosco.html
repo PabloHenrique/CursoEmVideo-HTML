@@ -4,8 +4,16 @@
         <meta charset="UTF-8">
         <title>Google Glass</title>
         <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+        <link rel="stylesheet" type="text/css" href="_css/form.css"/>
     </head>
     <script language="javascript" src="_javascript/funcoes.js"></script>
+    <script>
+        function calcular(){
+            var quant = parseInt(document.getElementById('campoQtd').value);
+            var total = quant * 1500; //Valor do produto
+            document.getElementById('campoPreco').value = total;
+        }
+    </script>
     <body>
         <div id="interface">
             <header id="cabecalho">
@@ -49,7 +57,7 @@
                             <h3 class="dir">Atualizado em 20/Dezembro/2021</h3>
                         </hgroup>
                     </header>
-                    <form method="post" id="formulario" action="mailto:pablohenriquenadai@gmail.com">
+                    <form method="post" id="formulario" action="mailto:pablohenriquenadai@gmail.com" oninput="calcular();">
                     <!--
                         GET - Dados enviados através da URL (Rápido / Riscos)
                         POST - Dados enviados através de pacotes da internet (Lento / Seguro)
@@ -84,47 +92,56 @@
                         
                         <fieldset id="end">
                             <legend>Endereço do Usuário</legend>
-                                <p><label for="campoLog">Logradouro:</label> <input type="text" name="tLog" id="campoLog" size="13" maxlength="80" placeholder="Ex: Rua, Av ..."></p>
-                                <p><label for="campoNumero">Número:</label> <input type="number" name="tNumero" id="campoNumero" min="0" max="9999" placeholder="Ex: 235"></p><!-- Número mínimo e máximo-->
-                                <p><label for="campoEstado">Estado:</label>
-                                <select name="selEstado" id="campoEstado">
-                                    <optgroup label="Região Sudeste">
-                                        <option value="RJ">Rio de Janeiro</option>
-                                        <option value="SP">São Paulo</option>
-                                        <option value="MG">Minas Gerais</option>
-                                    </optgroup>
-                                    <optgroup label="Região Sul">
-                                        <option value="PR">Paraná</option>
-                                        <option value="SC">Santa Catarina</option>
-                                        <option value="RS">Rio Grande Do Sul</option>
-                                    </optgroup>
-                                </select></p>
-                                <p><label for="campoCidade">Cidade:</label>
-                                <input type="text" name="tCidade" id="campoCidade" maxlength="40" size="20" placeholder="Ex: suaCidade" list="cidades"></p>
-                                <datalist id="cidades">
-                                    <option value="Rio de Janeiro"></option>
-                                    <option value="Nova Iguaçu"></option>
-                                    <option value="Niteroí"></option>
-                                    <option value="Outra Cidade"></option>
-                                </datalist>
-                            </fieldset>
+                            <p><label for="campoLog">Logradouro:</label> <input type="text" name="tLog" id="campoLog" size="13" maxlength="80" placeholder="Ex: Rua, Av ..."></p>
+                            <p><label for="campoNumero">Número:</label> <input type="number" name="tNumero" id="campoNumero" min="0" max="9999" placeholder="Ex: 235"></p><!-- Número mínimo e máximo-->
+                            <p><label for="campoEstado">Estado:</label>
+                            <select name="selEstado" id="campoEstado">
+                                <optgroup label="Região Sudeste">
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="MG">Minas Gerais</option>
+                                </optgroup>
+                                <optgroup label="Região Sul">
+                                    <option value="PR">Paraná</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="RS">Rio Grande Do Sul</option>
+                                </optgroup>
+                            </select></p>
+                            <p><label for="campoCidade">Cidade:</label>
+                            <input type="text" name="tCidade" id="campoCidade" maxlength="40" size="20" placeholder="Ex: suaCidade" list="cidades"></p>
+                            <datalist id="cidades">
+                                <option value="Rio de Janeiro"></option>
+                                <option value="Nova Iguaçu"></option>
+                                <option value="Niteroí"></option>
+                                <option value="Outra Cidade"></option>
+                            </datalist>
+                        </fieldset>
                         
                         <fieldset id="msg">
                             <legend>Mensagem do Usuário</legend>
-                                <p><label for="">Grau de Urgência:</label>
+                                <p><label for="campoUrg">Grau de Urgência:</label>
                                 <sub>Mín</sub><input type="range" name="tUrg" id="campoUrg" min="0" max="10" step="1"><sup>Máx</sup></p><br>
-                                <p><label for="">Mensagem:</label><br>
-                                <textarea name="tMsg" id="campoMsg" cols="45" rows="5" placeholder="Digite aqui a sua mensagem!"></textarea></p>
+                                <p><label for="campoMsg">Mensagem:</label><br>
+                                <textarea name="tMsg" id="campoMsg" cols="35" rows="5" placeholder="Digite aqui a sua mensagem!"></textarea></p>
                         </fieldset>
                         
                         <fieldset id="pedido">
                             <legend>Quero um Google Glass</legend>
-                                <p><label for="">Gostaria de adquirir um Google Glass quando disponível</label></p>
-                                <p><label for="">Cor:</label></p>
-                                <p><label for="">Quantidade:</label></p>
-                                <p><label for="">Preço Total: R$</label></p>
+                                <p>
+                                    <input type="checkbox" name="tAdq" id="campoAdq" checked>
+                                    <label for="campoAdq">Gostaria de adquirir um Google Glass quando disponível</label>
+                                </p>
+                                <p><label for="campoCor">Cor:</label><input type="color" name="tCor" id="campoCor" value="#0000FF"></p>
+                                <p>
+                                    <label for="campoQtd">Quantidade:</label>
+                                    <input type="number" name="tQtd" id="campoQtd" min="0" max="5" value="0">
+                                </p>
+                                <p>
+                                    <label for="campoPreco">Preço Total: R$</label>
+                                    <input type="text" name="tPreco" id="campoPreco" placeholder="Total de custos" readonly>
+                                </p>
                         </fieldset>
-                        [BOTÃO ENVIAR]
+                        <input type="image" name="tBotaoEnviar" src="_imagens/botao-enviar.png">
                     </form>
                 </article>
             </section>
